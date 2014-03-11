@@ -1,0 +1,10 @@
+<div class="header" ng-controller="NavbarCtrl">
+  <ul class="navtop navtop-pills pull-right">
+    <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
+        <a ng-href="{{item.link}}">{{item.title}}</a>
+    </li>
+  </ul>
+  <div class="logo">
+    <a href="/"><h3 class="text-muted"><span class="logo1">DARK</span><span class="logo2">TO</span><span class="logo1">SPARK</span></h3></a>
+  </div>
+  </div>
