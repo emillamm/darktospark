@@ -9,12 +9,7 @@
     <h1>{{activeRing.title}}</h1>
     <p>{{activeRing.body}}</p>
   </div>
-  <div class="ring-wrap">
-    <div>
-      <div ng-repeat="ssring in data">
-        <div ng-show="ssring==activeRing" class="animateMe"><img class="ring" src="images/{{activeRing.file}}"></div>
-      </div>
-    </div>
-    
+  <div ng-repeat="ssring in data">
+    <div ng-show="ssring==activeRing" class="animateMe ring-wrap"><img class="ring" src="images/{{activeRing.file}}"></div>
   </div>
 </div>
