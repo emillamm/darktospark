@@ -1,26 +1,20 @@
 <div ng-include="'partials/navbar'"></div>
 <div ng-controller="SeriesCtrl">
   <ul class="subnav subnav-pills" id="subnav-stacked">
-  <li ng-repeat="ring in data" ng-click="$event.preventDefault()" ng-class="{active: isActive(ring)}">    
-    <a href="#" ng-click="setActive(ring)">{{ring.name}}</a>
-  </li>
+    <li ng-repeat="ring in data" ng-click="$event.preventDefault()" ng-class="{active: isActive(ring)}">    
+      <a href="#" ng-click="setActive(ring)">{{ring.name}}</a>
+    </li>
   </ul>
-  <!-- <div class="ring-info2 well"> -->
-  
   <div class="ring-info2">
     <h1>{{activeRing.title}}</h1>
-    
     <p>{{activeRing.body}}</p>
   </div>
   <div class="ring-wrap">
-      <img class="ring" src="images/{{activeRing.file}}">
+    <div>
+      <div ng-repeat="ssring in data">
+        <div ng-show="ssring==activeRing" ng-show="ssring!=activeRing" class="animateMe"><img class="ring" src="images/{{activeRing.file}}"></div>
+      </div>
+    </div>
+    
   </div>
-  <b>{{active.name}}</b>
-
-
 </div>
-<!--
-<div class="ring-wrap">
-  <img class="ring" src="images/front.png">
-</div>
--->
