@@ -3,9 +3,9 @@
 var express = require('express');
 
 //User validation
-var auth = express.basicAuth(function(user, pass) {     
-   return (user == "super" && pass == "ring");
-},'DARKTOSPARK preview');
+// var auth = express.basicAuth(function(user, pass) {     
+//    return (user == "super" && pass == "ring");
+// },'DARKTOSPARK preview');
 
 /**
  * Main application file
@@ -23,7 +23,8 @@ var app = express();
 require('./lib/config/express')(app);
 
 // Routing
-require('./lib/routes')(app, auth);
+//require('./lib/routes')(app, auth);
+require('./lib/routes')(app);
 
 // Start server
 app.listen(config.port, function () {
